@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nookesh Chadaram - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Toggle theme
+    function toggleTheme() {
+      document.documentElement.classList.toggle('dark');
+    }
+
+    // Update time
+    function updateTime() {
+      const now = new Date();
+      document.getElementById('time').innerText = now.toLocaleTimeString();
+    }
+    setInterval(updateTime, 1000);
+    window.onload = updateTime;
+  </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-white transition-all duration-300 font-sans">
+
+  <div class="min-h-screen flex flex-col items-center justify-center px-4 py-6">
+    <!-- Header -->
+    <div class="text-center">
+      <h1 class="text-4xl font-bold mb-2">Nookesh Chadaram</h1>
+      <p class="text-xl text-gray-500 dark:text-gray-300">.NET Developer | AI Explorer | Tech Enthusiast</p>
+      <p class="mt-2 text-sm">Current Time: <span id="time" class="font-semibold"></span></p>
+      <button onclick="toggleTheme()" class="mt-4 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl">
+        Toggle Theme
+      </button>
+    </div>
+
+    <!-- About Section -->
+    <div class="mt-10 max-w-xl text-center">
+      <h2 class="text-2xl font-semibold mb-2">About Me</h2>
+      <p class="text-gray-600 dark:text-gray-400">
+        I'm a passionate software developer with expertise in .NET, modern web technologies, and building AI-powered tools and agents. I love solving real-world problems and building efficient, scalable solutions.
+      </p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="mt-10 text-center space-x-4">
+      <a href="mailto:nookesh@example.com" class="text-indigo-600 dark:text-indigo-400 underline">Email</a>
+      <a href="https://github.com/yourgithub" class="text-indigo-600 dark:text-indigo-400 underline">GitHub</a>
+      <a href="https://linkedin.com/in/yourlinkedin" class="text-indigo-600 dark:text-indigo-400 underline">LinkedIn</a>
+    </div>
+  </div>
+
+</body>
+</html>
